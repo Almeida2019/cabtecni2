@@ -1,9 +1,10 @@
 /* ============================================================
    CABTECNI — Scroll-scrubbed cinematic sequence (home only)
-   Desktop: canvas frame sequence driven by GSAP ScrollTrigger.
-   Mobile / reduced-motion: plain autoplaying muted video —
-   frame-by-frame canvas scrubbing is desktop-input shaped and
-   too heavy to preload over mobile networks.
+   Canvas frame sequence driven by GSAP ScrollTrigger, on both
+   desktop and mobile — mobile loads a smaller/lighter frame set
+   (640x360, ~5.5MB vs 15MB) so preloading stays reasonable on
+   mobile networks. Reduced-motion users get a plain autoplaying
+   muted video instead, since motion can be disorienting for them.
    ============================================================ */
 (function () {
   "use strict";
@@ -12,8 +13,11 @@
   if (!section) return;
 
   var FRAME_COUNT = 306;
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var isMobile = window.matchMedia("(max-width: 880px)").matches;
+  var FRAME_DIR = isMobile ? "assets/frames-mobile" : "assets/frames";
   var FRAME_PATH = function (i) {
-    return "assets/frames/frame_" + String(i + 1).padStart(4, "0") + ".webp";
+    return FRAME_DIR + "/frame_" + String(i + 1).padStart(4, "0") + ".webp";
   };
   /* Frame ranges per clip, in the order they were shot into the sequence:
      ship arriving -> refinery -> offshore platform -> technician detail */
@@ -40,10 +44,7 @@
     });
   }
 
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var isMobile = window.matchMedia("(max-width: 880px)").matches;
-
-  if (reduceMotion || isMobile) {
+  if (reduceMotion) {
     initVideoFallback();
   } else {
     initCanvasScrub();
@@ -63,8 +64,8 @@
     var playPromise = video.play();
     if (playPromise && playPromise.catch) playPromise.catch(function () {});
 
-    // Mobile keeps the hero copy over the looping cinematic video; the chapter
-    // cards/rail (pointer-driven) stay hidden via the persistent .is-hero state.
+    // Reduced-motion users keep the hero copy over the looping video; the
+    // chapter cards/rail (scroll-driven) stay hidden via the .is-hero state.
     section.classList.add("is-hero");
   }
 
@@ -83,7 +84,9 @@
 
     var images = new Array(FRAME_COUNT);
     var loadedCount = 0;
-    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    // Retina canvases quadruple pixel-fill cost; cap at 1x on phones to
+    // keep the scrub smooth on mid-range hardware.
+    var dpr = isMobile ? 1 : Math.min(window.devicePixelRatio || 1, 2);
     var currentFrame = 0;
 
     function sizeCanvas() {
@@ -140,14 +143,26 @@
         return;
       }
       gsap.registerPlugin(ScrollTrigger);
-      var scrollLength = Math.round(FRAME_COUNT * 13);
+
+      // iOS Safari fights pinned/fixed elements during momentum scrolling
+      // (address-bar collapse, rubber-banding); normalizing scroll input
+      // avoids the jitter this otherwise causes on the pinned canvas.
+      if (isMobile && typeof ScrollTrigger.normalizeScroll === "function") {
+        ScrollTrigger.normalizeScroll(true);
+      }
+
+      // A shorter scroll distance per frame on mobile keeps the sequence
+      // from demanding an excessive amount of thumb-scrolling.
+      var pxPerFrame = isMobile ? 9 : 13;
+      var scrollLength = Math.round(FRAME_COUNT * pxPerFrame);
 
       var st = ScrollTrigger.create({
         trigger: section,
         start: "top top",
         end: "+=" + scrollLength,
         pin: true,
-        scrub: 0.6,
+        anticipatePin: 1,
+        scrub: isMobile ? 0.35 : 0.6,
         onUpdate: function (self) {
           var p = self.progress;
           var frame = Math.round(p * (FRAME_COUNT - 1));
