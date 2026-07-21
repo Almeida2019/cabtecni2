@@ -6,6 +6,16 @@
 
   var STORAGE_KEY = "cabtecni-lang";
   var DEFAULT_LANG = "pt";
+  var THEME_KEY = "cabtecni-theme";
+
+  /* ---------- Theme (light default, dark alternative) ----------
+     The initial theme is applied synchronously by an inline script in
+     <head>, before first paint, to avoid a flash of the wrong theme.
+     This just wires up the toggle button and keeps it in sync. */
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem(THEME_KEY, theme);
+  }
 
   /* ---------- i18n ---------- */
   function getLang() {
@@ -47,6 +57,14 @@
     document.querySelectorAll(".lang-toggle button").forEach(function (b) {
       b.addEventListener("click", function () {
         applyLang(b.getAttribute("data-lang"));
+      });
+    });
+
+    // theme toggle
+    document.querySelectorAll(".theme-toggle").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var current = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        applyTheme(current === "dark" ? "light" : "dark");
       });
     });
 
