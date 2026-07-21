@@ -823,7 +823,10 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
   .stats { grid-template-columns: 1fr 1fr; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .cta { padding: 70px 28px; }
-  .brand small { display: none; }
+  /* Icon-only logo on mobile — the full wordmark collides with the
+     language/theme toggles at narrow widths. */
+  .brand span { display: none; }
+  .nav-actions { gap: 14px; }
   .hero { min-height: auto; }
 }
 
