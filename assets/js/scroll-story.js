@@ -144,13 +144,6 @@
       }
       gsap.registerPlugin(ScrollTrigger);
 
-      // iOS Safari fights pinned/fixed elements during momentum scrolling
-      // (address-bar collapse, rubber-banding); normalizing scroll input
-      // avoids the jitter this otherwise causes on the pinned canvas.
-      if (isMobile && typeof ScrollTrigger.normalizeScroll === "function") {
-        ScrollTrigger.normalizeScroll(true);
-      }
-
       // A shorter scroll distance per frame on mobile keeps the sequence
       // from demanding an excessive amount of thumb-scrolling.
       var pxPerFrame = isMobile ? 9 : 13;
