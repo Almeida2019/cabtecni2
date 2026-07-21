@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CABTECNI — Engenharia & Procurement | Angola</title>
+  <meta name="description" content="CABTECNI, Lda — empresa angolana de sourcing global. Procurement, logística e trabalhos industriais para os sectores de petróleo & gás, mineração, energia e construção." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img class="mark-img" src="assets/img/favicon.png" alt="CABTECNI" />
+        <span>CABTECNI<small data-i18n="brand.tag">Engenharia & Procurement</small></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active" data-i18n="nav.home">Início</a></li>
+        <li><a href="about.html" data-i18n="nav.about">Quem Somos</a></li>
+        <li><a href="services.html" data-i18n="nav.services">Serviços</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contactos</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="lang-toggle">
+          <button data-lang="pt">PT</button>
+          <button data-lang="en">EN</button>
+        </div>
+        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= SCROLL STORY (HERO → CINEMATIC) ================= -->
+  <section class="story is-hero" id="story">
+    <div class="story-progress" aria-hidden="true"><span class="story-progress-bar"></span></div>
+
+    <canvas id="story-canvas" class="story-canvas" aria-hidden="true"></canvas>
+    <video id="story-video-fallback" class="story-video" muted loop playsinline preload="none" poster="assets/img/story-poster.jpg"></video>
+    <div class="story-vignette" aria-hidden="true"></div>
+
+    <div class="story-loading" id="story-loading">
+      <span class="story-loading-bar"><span id="story-loading-fill"></span></span>
+      <span class="story-loading-label" data-i18n="story.loading">A preparar a experiência…</span>
+    </div>
+
+    <!-- Hero overlay — shown at the very top, fades out as the sequence begins -->
+    <div class="story-hero" id="story-hero">
+      <div class="container">
+        <span class="hero-badge"><span class="dot"></span><span data-i18n="hero.badge">100% Angolana · +5 anos de experiência</span></span>
+        <h1 data-i18n-html="hero.title">Soluções de <span class="accent">engenharia e procurement</span> para a indústria</h1>
+        <p class="lead" data-i18n="hero.lead">A CABTECNI é uma empresa angolana de sourcing global.</p>
+        <div class="hero-cta">
+          <a href="services.html" class="btn btn--primary" data-i18n="hero.cta1">Ver Serviços</a>
+          <a href="contact.html" class="btn btn--ghost" data-i18n="hero.cta2">Fale Connosco</a>
+        </div>
+        <div class="story-scroll-hint" aria-hidden="true">
+          <span class="story-scroll-line"></span>
+          <span data-i18n="story.scroll">Role para explorar</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-overlay container">
+      <div class="story-caption-stack">
+        <article class="story-caption is-active" data-story-caption="1">
+          <div class="story-card">
+            <span class="story-card-tag"><span class="story-card-num">01</span><span class="story-card-total">/ 04</span><span class="story-card-eyebrow" data-i18n="story.eyebrow">De onde vem, até onde chega</span></span>
+            <h2 data-i18n="story.1.title">Sourcing global</h2>
+            <p data-i18n="story.1.body">Da origem ao porto — gerimos a cadeia de fornecimento em qualquer parte do mundo.</p>
+          </div>
+        </article>
+        <article class="story-caption" data-story-caption="2">
+          <div class="story-card">
+            <span class="story-card-tag"><span class="story-card-num">02</span><span class="story-card-total">/ 04</span><span class="story-card-eyebrow" data-i18n="story.eyebrow">De onde vem, até onde chega</span></span>
+            <h2 data-i18n="story.2.title">Presença industrial</h2>
+            <p data-i18n="story.2.body">Petróleo & gás, petroquímica, energia — conhecemos as exigências de cada sector.</p>
+          </div>
+        </article>
+        <article class="story-caption" data-story-caption="3">
+          <div class="story-card">
+            <span class="story-card-tag"><span class="story-card-num">03</span><span class="story-card-total">/ 04</span><span class="story-card-eyebrow" data-i18n="story.eyebrow">De onde vem, até onde chega</span></span>
+            <h2 data-i18n="story.3.title">Operações offshore</h2>
+            <p data-i18n="story.3.body">Das plataformas ao terreno, apoiamos operações onde a precisão é inegociável.</p>
+          </div>
+        </article>
+        <article class="story-caption" data-story-caption="4">
+          <div class="story-card">
+            <span class="story-card-tag"><span class="story-card-num">04</span><span class="story-card-total">/ 04</span><span class="story-card-eyebrow" data-i18n="story.eyebrow">De onde vem, até onde chega</span></span>
+            <h2 data-i18n="story.4.title">Precisão no detalhe</h2>
+            <p data-i18n="story.4.body">Cada válvula, cada aperto, cada ligação — executado por técnicos especializados.</p>
+          </div>
+        </article>
+      </div>
+
+      <nav class="story-rail" aria-label="Capítulos">
+        <button type="button" class="story-rail-item is-active" data-story-dot="1">
+          <span class="story-rail-num">01</span>
+          <span class="story-rail-label" data-i18n="story.1.title">Sourcing global</span>
+        </button>
+        <button type="button" class="story-rail-item" data-story-dot="2">
+          <span class="story-rail-num">02</span>
+          <span class="story-rail-label" data-i18n="story.2.title">Presença industrial</span>
+        </button>
+        <button type="button" class="story-rail-item" data-story-dot="3">
+          <span class="story-rail-num">03</span>
+          <span class="story-rail-label" data-i18n="story.3.title">Operações offshore</span>
+        </button>
+        <button type="button" class="story-rail-item" data-story-dot="4">
+          <span class="story-rail-num">04</span>
+          <span class="story-rail-label" data-i18n="story.4.title">Precisão no detalhe</span>
+        </button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ================= SECTORS ================= -->
+  <div class="sectors">
+    <div class="container sectors-inner">
+      <span data-i18n="sector.1">Petróleo & Gás</span>
+      <span data-i18n="sector.2">Petroquímica</span>
+      <span data-i18n="sector.3">Mineração</span>
+      <span data-i18n="sector.4">Energia</span>
+      <span data-i18n="sector.5">Construção</span>
+      <span data-i18n="sector.6">Indústria</span>
+      <span data-i18n="sector.7">Agricultura</span>
+    </div>
+  </div>
+
+  <!-- ================= ABOUT INTRO ================= -->
+  <section class="section">
+    <div class="container split">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="about.eyebrow">Quem Somos</span>
+        <h2 data-i18n="about.title">Uma parceira angolana com alcance global</h2>
+        <p data-i18n="about.p1">A CABTECNI, Lda é uma empresa privada, 100% angolana.</p>
+        <p data-i18n="about.p2">Operando através da nossa sede sul-africana, a NAS Global.</p>
+        <a href="about.html" class="btn btn--ghost" data-i18n="about.cta">Saber mais sobre nós</a>
+      </div>
+      <div class="media reveal"><img src="assets/img/about-us.jpg" alt="Equipa CABTECNI" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <!-- ================= PILLARS ================= -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" data-i18n="pillars.eyebrow">O que fazemos</span>
+        <h2 data-i18n="pillars.title">Quatro pilares operacionais</h2>
+        <p data-i18n="pillars.sub">Soluções integradas para o sector industrial.</p>
+      </div>
+      <div class="grid grid-4">
+        <div class="card pillar reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+          <div class="num">01</div>
+          <h3 data-i18n="pillar1.title">Sourcing & Procurement</h3>
+          <p data-i18n="pillar1.desc">Todo o ciclo de procurement.</p>
+        </div>
+        <div class="card pillar reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a5 5 0 0 0-6.4 6.4l-5 5a2 2 0 1 0 2.8 2.8l5-5a5 5 0 0 0 6.4-6.4l-2.6 2.6-2.1-2.1z"/></svg></div>
+          <div class="num">02</div>
+          <h3 data-i18n="pillar2.title">Engenharia & Serviços Técnicos</h3>
+          <p data-i18n="pillar2.desc">Aperto de parafusos, válvulas e motores.</p>
+        </div>
+        <div class="card pillar reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V9l6-4 6 4v12M10 21v-6h4v6"/></svg></div>
+          <div class="num">03</div>
+          <h3 data-i18n="pillar3.title">Operações Industriais</h3>
+          <p data-i18n="pillar3.desc">Aluguer de equipamentos e mão-de-obra.</p>
+        </div>
+        <div class="card pillar reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8-8 11-4.5-3-8-6-8-11V5l8-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <div class="num">04</div>
+          <h3 data-i18n="pillar4.title">Compromisso com a Segurança</h3>
+          <p data-i18n="pillar4.desc">Cumprimento rigoroso das normas de HSE.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES GRID ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" data-i18n="svc.eyebrow">Serviços</span>
+        <h2 data-i18n="svc.title">Aquilo em que o podemos apoiar</h2>
+        <p data-i18n="svc.sub">Oito áreas de serviço.</p>
+      </div>
+      <div class="grid grid-4">
+        <a class="card reveal" href="services.html#s1"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg></div><h3 data-i18n="s1.title">Procurement</h3><p data-i18n="s1.short"></p><span class="card-link"><span data-i18n="svc.readmore">Ver detalhe</span> →</span></a>
+        <a class="card reveal" href="services.html#s2"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3 data-i18n="s2.title">Logística</h3><p data-i18n="s2.short"></p><span class="card-link"><span data-i18n="svc.readmore">Ver detalhe</span> →</span></a>
+        <a class="card reveal" href="services.html#s3"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a5 5 0 0 0-6.4 6.4l-5 5a2 2 0 1 0 2.8 2.8l5-5a5 5 0 0 0 6.4-6.4l-2.6 2.6-2.1-2.1z"/></svg></div><h3 data-i18n="s3.title">Aperto de Parafusos</h3><p data-i18n="s3.short"></p><span class="card-link"><span data-i18n="svc.readmore">Ver detalhe</span> →</span></a>
+        <a class="card reveal" href="services.html#s4"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div><h3 data-i18n="s4.title">Aluguer de Equipamentos</h3><p data-i18n="s4.short"></p><span class="card-link"><span data-i18n="svc.readmore">Ver detalhe</span> →</span></a>
+        <a class="card reveal" href="services.html#s5"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3 data-i18n="s5.title">Mão-de-Obra</h3><p data-i18n="s5.short"></p><span class="card-link"><span data-i18n="svc.readmore">Ver detalhe</span> →</span></a>
+        <a class="card reveal" href="services.html#s6"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg></div><h3 data-i18n="s6.title">Motores Eléctricos</h3><p data-i18n="s6.short"></p><span class="card-link"><span data-i18n="svc.readmore">Ver detalhe</span> →</span></a>
+        <a class="card reveal" href="services.html#s7"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"/></svg></div><h3 data-i18n="s7.title">Válvulas</h3><p data-i18n="s7.short"></p><span class="card-link"><span data-i18n="svc.readmore">Ver detalhe</span> →</span></a>
+        <a class="card reveal" href="services.html#s8"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13v10H3zM16 10h5v7h-5M6 7V4h7v3"/></svg></div><h3 data-i18n="s8.title">Fabricação de Tubagem</h3><p data-i18n="s8.short"></p><span class="card-link"><span data-i18n="svc.readmore">Ver detalhe</span> →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCESS ================= -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" data-i18n="proc.eyebrow">Como trabalhamos</span>
+        <h2 data-i18n="proc.title">Do pedido à entrega</h2>
+        <p data-i18n="proc.sub">Um processo estruturado.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><div class="step-num">01</div><h3 data-i18n="step1.title">Análise & Sourcing</h3><p data-i18n="step1.desc"></p></div>
+        <div class="step reveal"><div class="step-num">02</div><h3 data-i18n="step2.title">Planeamento & Logística</h3><p data-i18n="step2.desc"></p></div>
+        <div class="step reveal"><div class="step-num">03</div><h3 data-i18n="step3.title">Execução & Entrega</h3><p data-i18n="step3.desc"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VALUES ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow" data-i18n="val.eyebrow">Soluções de confiança</span>
+        <h2 data-i18n="val.title">Aquilo que nos move</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card value reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h3 data-i18n="val1.title">Qualidade & Transparência</h3><p data-i18n="val1.desc"></p></div>
+        <div class="card value reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8-8 11-4.5-3-8-6-8-11V5l8-3z"/></svg></div><h3 data-i18n="val2.title">Segurança Operacional</h3><p data-i18n="val2.desc"></p></div>
+        <div class="card value reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3 data-i18n="val3.title">Parceria com Confiança</h3><p data-i18n="val3.desc"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="stats">
+        <div class="stat reveal"><div class="num"><span data-i18n="stat1.num">100%</span></div><div class="label" data-i18n="stat1.label">Capital angolano</div></div>
+        <div class="stat reveal"><div class="num"><span class="accent" data-i18n="stat2.num">+5</span></div><div class="label" data-i18n="stat2.label">Anos de experiência</div></div>
+        <div class="stat reveal"><div class="num"><span class="accent" data-i18n="stat3.num">8</span></div><div class="label" data-i18n="stat3.label">Áreas de serviço</div></div>
+        <div class="stat reveal"><div class="num"><span class="accent" data-i18n="stat4.num">7</span></div><div class="label" data-i18n="stat4.label">Sectores servidos</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="cta reveal">
+        <h2 data-i18n="cta.title">Precisa de um parceiro de procurement de confiança?</h2>
+        <p data-i18n="cta.p">Fale com a nossa equipa.</p>
+        <div class="hero-cta" style="justify-content:center">
+          <a href="contact.html" class="btn btn--primary" data-i18n="cta.btn1">Contacte-nos</a>
+          <a href="services.html" class="btn btn--ghost" data-i18n="cta.btn2">Ver serviços</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand"><img class="mark-img" src="assets/img/favicon.png" alt="CABTECNI" /><span>CABTECNI</span></a>
+          <p data-i18n="foot.about">A CABTECNI presta serviços de procurement e trabalhos industriais.</p>
+          <div class="social">
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5.01A2.5 2.5 0 014.98 3.5zM3 8.98h4v12H3v-12zM9 8.98h3.8v1.64h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1v6.32h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96v5.7H9v-12z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 data-i18n="foot.company">Empresa</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+            <li><a href="about.html" data-i18n="nav.about">Quem Somos</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Serviços</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contactos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="foot.servicesh">Serviços</h4>
+          <ul>
+            <li><a href="services.html#s1" data-i18n="s1.title">Procurement</a></li>
+            <li><a href="services.html#s2" data-i18n="s2.title">Logística</a></li>
+            <li><a href="services.html#s3" data-i18n="s3.title">Aperto de Parafusos</a></li>
+            <li><a href="services.html#s6" data-i18n="s6.title">Motores Eléctricos</a></li>
+            <li><a href="services.html#s8" data-i18n="s8.title">Tubagem</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="foot.contacth">Contactos</h4>
+          <ul class="footer-contact">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+244935625151">+244 935 62 51 51</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg><a href="mailto:sales@cabtecni.com">sales@cabtecni.com</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Luanda, Belas, Kilamba</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span data-i18n="foot.hours">Seg–Sex, 08h00–17h00</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> CABTECNI, Lda. <span data-i18n="foot.rights">Todos os direitos reservados.</span></span>
+        <span>Luanda · Angola</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/js/scroll-story.js"></script>
+</body>
+</html>
