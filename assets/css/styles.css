@@ -228,15 +228,14 @@ h1, h2, h3, h4 {
 /* Full logo lockup (icon + wordmark + tagline), swapped between a white
    version (readable on the always-dark photo header / dark theme) and a
    full-colour version (used once the header/footer sit on a light,
-   opaque, themed background). Both images occupy the same box so the
-   swap is instant with no layout shift. */
+   opaque, themed background). Both share the same height so there's no
+   layout jump on swap. */
 .brand-logo {
   display: block;
   height: 34px;
   width: auto;
 }
 .brand-logo-color { display: none; }
-.brand .brand-logo-color { position: absolute; left: 0; top: 50%; transform: translateY(-50%); }
 
 html[data-theme="light"] .header.scrolled .brand-logo-white { display: none; }
 html[data-theme="light"] .header.scrolled .brand-logo-color { display: block; }
