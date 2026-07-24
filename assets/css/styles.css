@@ -909,10 +909,12 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
   margin-bottom: 40px;
 }
 .story-hero .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
-/* Ghost button sits on the always-dark cinematic photo — fixed light
+/* Ghost buttons sit on the always-dark cinematic photo — fixed light
    resting state regardless of theme (hover already inverts to a solid
-   fill via --invert-bg/--invert-text, which reads fine either way). */
-.story-hero .btn--ghost { border-color: rgba(255,255,255,0.35); color: var(--oncolor-text); }
+   fill via --invert-bg/--invert-text, which reads fine either way).
+   Applies to every .story-scrub section (About/Values/CTA), not just
+   the hero. */
+.story .btn--ghost { border-color: rgba(255,255,255,0.35); color: var(--oncolor-text); }
 
 .story-scroll-hint {
   display: flex;
@@ -1079,7 +1081,13 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
   margin-bottom: 14px;
   letter-spacing: -0.02em;
 }
-.story-card p { color: #d4dae2; font-size: 1.02rem; max-width: 440px; }
+.story-card p { color: #d4dae2; font-size: 1.02rem; max-width: 440px; margin-bottom: 14px; }
+.story-card p:last-of-type { margin-bottom: 0; }
+.story-card .btn { margin-top: 22px; }
+/* Plain (non-chapter) eyebrow inside a story card — About/CTA reuse the
+   site's standard .eyebrow markup, just fixed-colour for the photo backdrop. */
+.story-card .eyebrow { color: var(--oncolor-muted); margin-bottom: 16px; }
+.story-card .eyebrow::before { background: var(--story-accent); }
 
 /* --- Chapter rail (right) --- */
 .story-rail {

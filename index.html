@@ -144,17 +144,30 @@
     </div>
   </div>
 
-  <!-- ================= ABOUT INTRO ================= -->
-  <section class="section">
-    <div class="container split">
-      <div class="reveal">
-        <span class="eyebrow" data-i18n="about.eyebrow">Quem Somos</span>
-        <h2 data-i18n="about.title">Uma parceira angolana com alcance global</h2>
-        <p data-i18n="about.p1">A CABTECNI, Lda é uma empresa privada, 100% angolana.</p>
-        <p data-i18n="about.p2">Operando através da nossa sede sul-africana, a NAS Global.</p>
-        <a href="about.html" class="btn btn--ghost" data-i18n="about.cta">Saber mais sobre nós</a>
+  <!-- ================= ABOUT INTRO (CINEMATIC) ================= -->
+  <section class="story story-scrub" id="story-about"
+    data-frames="assets/frames-about" data-frames-mobile="assets/frames-about-mobile"
+    data-frame-count="72" data-video-fallback="assets/vid/about-reel.mp4" data-px-per-frame="11">
+    <div class="story-progress" aria-hidden="true"><span class="story-progress-bar"></span></div>
+    <canvas class="story-canvas" aria-hidden="true"></canvas>
+    <video class="story-video" muted loop playsinline preload="none" poster="assets/img/about-poster.jpg"></video>
+    <div class="story-vignette" aria-hidden="true"></div>
+    <div class="story-loading">
+      <span class="story-loading-bar"><span class="story-loading-fill"></span></span>
+      <span class="story-loading-label" data-i18n="story.loading">A preparar a experiência…</span>
+    </div>
+    <div class="story-overlay container">
+      <div class="story-caption-stack">
+        <article class="story-caption is-active" data-story-caption="1">
+          <div class="story-card">
+            <span class="eyebrow" data-i18n="about.eyebrow">Quem Somos</span>
+            <h2 data-i18n="about.title">Uma parceira angolana com alcance global</h2>
+            <p data-i18n="about.p1">A CABTECNI, Lda é uma empresa privada, 100% angolana.</p>
+            <p data-i18n="about.p2">Operando através da nossa sede sul-africana, a NAS Global.</p>
+            <a href="about.html" class="btn btn--ghost" data-i18n="about.cta">Saber mais sobre nós</a>
+          </div>
+        </article>
       </div>
-      <div class="media reveal"><img src="assets/img/about-us.jpg" alt="Equipa CABTECNI" loading="lazy" /></div>
     </div>
   </section>
 
@@ -232,18 +245,57 @@
     </div>
   </section>
 
-  <!-- ================= VALUES ================= -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head center reveal">
-        <span class="eyebrow" data-i18n="val.eyebrow">Soluções de confiança</span>
-        <h2 data-i18n="val.title">Aquilo que nos move</h2>
+  <!-- ================= VALUES (CINEMATIC) ================= -->
+  <section class="story story-scrub" id="story-values"
+    data-frames="assets/frames-values" data-frames-mobile="assets/frames-values-mobile"
+    data-frame-count="216" data-video-fallback="assets/vid/values-reel.mp4"
+    data-segments="[[0,72],[72,144],[144,216]]">
+    <div class="story-progress" aria-hidden="true"><span class="story-progress-bar"></span></div>
+    <canvas class="story-canvas" aria-hidden="true"></canvas>
+    <video class="story-video" muted loop playsinline preload="none" poster="assets/img/values-poster.jpg"></video>
+    <div class="story-vignette" aria-hidden="true"></div>
+    <div class="story-loading">
+      <span class="story-loading-bar"><span class="story-loading-fill"></span></span>
+      <span class="story-loading-label" data-i18n="story.loading">A preparar a experiência…</span>
+    </div>
+    <div class="story-overlay container">
+      <div class="story-caption-stack">
+        <article class="story-caption is-active" data-story-caption="1">
+          <div class="story-card">
+            <span class="story-card-tag"><span class="story-card-num">01</span><span class="story-card-total">/ 03</span><span class="story-card-eyebrow" data-i18n="val.eyebrow">Soluções industriais de confiança</span></span>
+            <h2 data-i18n="val1.title">Qualidade & Transparência</h2>
+            <p data-i18n="val1.desc">Actuamos segundo as melhores práticas, salvaguardando os interesses de clientes e parceiros.</p>
+          </div>
+        </article>
+        <article class="story-caption" data-story-caption="2">
+          <div class="story-card">
+            <span class="story-card-tag"><span class="story-card-num">02</span><span class="story-card-total">/ 03</span><span class="story-card-eyebrow" data-i18n="val.eyebrow">Soluções industriais de confiança</span></span>
+            <h2 data-i18n="val2.title">Segurança Operacional</h2>
+            <p data-i18n="val2.desc">A segurança das pessoas e dos activos está no centro de cada intervenção que realizamos.</p>
+          </div>
+        </article>
+        <article class="story-caption" data-story-caption="3">
+          <div class="story-card">
+            <span class="story-card-tag"><span class="story-card-num">03</span><span class="story-card-total">/ 03</span><span class="story-card-eyebrow" data-i18n="val.eyebrow">Soluções industriais de confiança</span></span>
+            <h2 data-i18n="val3.title">Parceria com Confiança</h2>
+            <p data-i18n="val3.desc">Construímos relações sólidas e duradouras, orientadas para o sucesso dos nossos clientes.</p>
+          </div>
+        </article>
       </div>
-      <div class="grid grid-3">
-        <div class="card value reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h3 data-i18n="val1.title">Qualidade & Transparência</h3><p data-i18n="val1.desc"></p></div>
-        <div class="card value reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8-8 11-4.5-3-8-6-8-11V5l8-3z"/></svg></div><h3 data-i18n="val2.title">Segurança Operacional</h3><p data-i18n="val2.desc"></p></div>
-        <div class="card value reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3 data-i18n="val3.title">Parceria com Confiança</h3><p data-i18n="val3.desc"></p></div>
-      </div>
+      <nav class="story-rail" aria-label="Valores">
+        <button type="button" class="story-rail-item is-active" data-story-dot="1">
+          <span class="story-rail-num">01</span>
+          <span class="story-rail-label" data-i18n="val1.title">Qualidade & Transparência</span>
+        </button>
+        <button type="button" class="story-rail-item" data-story-dot="2">
+          <span class="story-rail-num">02</span>
+          <span class="story-rail-label" data-i18n="val2.title">Segurança Operacional</span>
+        </button>
+        <button type="button" class="story-rail-item" data-story-dot="3">
+          <span class="story-rail-num">03</span>
+          <span class="story-rail-label" data-i18n="val3.title">Parceria com Confiança</span>
+        </button>
+      </nav>
     </div>
   </section>
 
@@ -259,16 +311,30 @@
     </div>
   </section>
 
-  <!-- ================= CTA ================= -->
-  <section class="section">
-    <div class="container">
-      <div class="cta reveal">
-        <h2 data-i18n="cta.title">Precisa de um parceiro de procurement de confiança?</h2>
-        <p data-i18n="cta.p">Fale com a nossa equipa.</p>
-        <div class="hero-cta" style="justify-content:center">
-          <a href="contact.html" class="btn btn--primary" data-i18n="cta.btn1">Contacte-nos</a>
-          <a href="services.html" class="btn btn--ghost" data-i18n="cta.btn2">Ver serviços</a>
-        </div>
+  <!-- ================= CTA (CINEMATIC) ================= -->
+  <section class="story story-scrub" id="story-cta"
+    data-frames="assets/frames-cta" data-frames-mobile="assets/frames-cta-mobile"
+    data-frame-count="72" data-video-fallback="assets/vid/cta-reel.mp4" data-px-per-frame="11">
+    <div class="story-progress" aria-hidden="true"><span class="story-progress-bar"></span></div>
+    <canvas class="story-canvas" aria-hidden="true"></canvas>
+    <video class="story-video" muted loop playsinline preload="none" poster="assets/img/cta-poster.jpg"></video>
+    <div class="story-vignette" aria-hidden="true"></div>
+    <div class="story-loading">
+      <span class="story-loading-bar"><span class="story-loading-fill"></span></span>
+      <span class="story-loading-label" data-i18n="story.loading">A preparar a experiência…</span>
+    </div>
+    <div class="story-overlay container">
+      <div class="story-caption-stack">
+        <article class="story-caption is-active" data-story-caption="1">
+          <div class="story-card">
+            <h2 data-i18n="cta.title">Precisa de um parceiro de procurement de confiança?</h2>
+            <p data-i18n="cta.p">Fale com a nossa equipa.</p>
+            <div class="hero-cta">
+              <a href="contact.html" class="btn btn--primary" data-i18n="cta.btn1">Contacte-nos</a>
+              <a href="services.html" class="btn btn--ghost" data-i18n="cta.btn2">Ver serviços</a>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -325,5 +391,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="assets/js/scroll-story.js"></script>
+  <script src="assets/js/scroll-media.js"></script>
 </body>
 </html>
