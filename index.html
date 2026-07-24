@@ -229,19 +229,57 @@
     </div>
   </section>
 
-  <!-- ================= PROCESS ================= -->
-  <section class="section section--alt">
-    <div class="container">
-      <div class="section-head center reveal">
-        <span class="eyebrow" data-i18n="proc.eyebrow">Como trabalhamos</span>
-        <h2 data-i18n="proc.title">Do pedido à entrega</h2>
-        <p data-i18n="proc.sub">Um processo estruturado.</p>
+  <!-- ================= PROCESS (CINEMATIC) ================= -->
+  <section class="story story-scrub" id="story-process"
+    data-frames="assets/frames-process" data-frames-mobile="assets/frames-process-mobile"
+    data-frame-count="216" data-video-fallback="assets/vid/process-reel.mp4"
+    data-segments="[[0,72],[72,144],[144,216]]">
+    <div class="story-progress" aria-hidden="true"><span class="story-progress-bar"></span></div>
+    <canvas class="story-canvas" aria-hidden="true"></canvas>
+    <video class="story-video" muted loop playsinline preload="none" poster="assets/img/process-poster.jpg"></video>
+    <div class="story-vignette" aria-hidden="true"></div>
+    <div class="story-loading">
+      <span class="story-loading-bar"><span class="story-loading-fill"></span></span>
+      <span class="story-loading-label" data-i18n="story.loading">A preparar a experiência…</span>
+    </div>
+    <div class="story-overlay container">
+      <div class="story-caption-stack">
+        <article class="story-caption is-active" data-story-caption="1">
+          <div class="story-card">
+            <span class="story-card-tag"><span class="story-card-num">01</span><span class="story-card-total">/ 03</span><span class="story-card-eyebrow" data-i18n="proc.eyebrow">Como trabalhamos</span></span>
+            <h2 data-i18n="step1.title">Análise & Sourcing</h2>
+            <p data-i18n="step1.desc">Avaliamos os requisitos técnicos, os recursos e os objectivos do cliente para definir a melhor abordagem e fornecedores.</p>
+          </div>
+        </article>
+        <article class="story-caption" data-story-caption="2">
+          <div class="story-card">
+            <span class="story-card-tag"><span class="story-card-num">02</span><span class="story-card-total">/ 03</span><span class="story-card-eyebrow" data-i18n="proc.eyebrow">Como trabalhamos</span></span>
+            <h2 data-i18n="step2.title">Planeamento & Logística</h2>
+            <p data-i18n="step2.desc">Estruturamos equipas, materiais, prazos e rotas de transporte, garantindo controlo e eficiência do início ao fim.</p>
+          </div>
+        </article>
+        <article class="story-caption" data-story-caption="3">
+          <div class="story-card">
+            <span class="story-card-tag"><span class="story-card-num">03</span><span class="story-card-total">/ 03</span><span class="story-card-eyebrow" data-i18n="proc.eyebrow">Como trabalhamos</span></span>
+            <h2 data-i18n="step3.title">Execução & Entrega</h2>
+            <p data-i18n="step3.desc">Acompanhamos a execução com foco na segurança, na qualidade técnica e na chegada segura dos bens no prazo estipulado.</p>
+          </div>
+        </article>
       </div>
-      <div class="steps">
-        <div class="step reveal"><div class="step-num">01</div><h3 data-i18n="step1.title">Análise & Sourcing</h3><p data-i18n="step1.desc"></p></div>
-        <div class="step reveal"><div class="step-num">02</div><h3 data-i18n="step2.title">Planeamento & Logística</h3><p data-i18n="step2.desc"></p></div>
-        <div class="step reveal"><div class="step-num">03</div><h3 data-i18n="step3.title">Execução & Entrega</h3><p data-i18n="step3.desc"></p></div>
-      </div>
+      <nav class="story-rail" aria-label="Processo">
+        <button type="button" class="story-rail-item is-active" data-story-dot="1">
+          <span class="story-rail-num">01</span>
+          <span class="story-rail-label" data-i18n="step1.title">Análise & Sourcing</span>
+        </button>
+        <button type="button" class="story-rail-item" data-story-dot="2">
+          <span class="story-rail-num">02</span>
+          <span class="story-rail-label" data-i18n="step2.title">Planeamento & Logística</span>
+        </button>
+        <button type="button" class="story-rail-item" data-story-dot="3">
+          <span class="story-rail-num">03</span>
+          <span class="story-rail-label" data-i18n="step3.title">Execução & Entrega</span>
+        </button>
+      </nav>
     </div>
   </section>
 
