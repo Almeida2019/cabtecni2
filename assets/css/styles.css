@@ -372,15 +372,24 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
   border-bottom: 1px solid var(--border);
   overflow: hidden;
 }
+/* The photo itself is a real element (see .page-hero-media below), not
+   this pseudo-element -- a CSS custom property holding a relative url()
+   resolves against the stylesheet's location, not the page's, so an
+   inline --page-hero-img var() 404s. An inline style="background-image"
+   on a real DOM node resolves correctly against the HTML page instead. */
 .page-hero::before {
   content: "";
   position: absolute; inset: 0;
-  background:
-    linear-gradient(90deg, rgba(20,20,20,0.97) 20%, rgba(20,20,20,0.75) 100%),
-    url("../img/services-hero.jpg") center / cover no-repeat;
-  opacity: 0.55;
+  background: linear-gradient(90deg, rgba(20,20,20,0.97) 20%, rgba(20,20,20,0.75) 100%);
+  z-index: 1;
 }
-.page-hero .container { position: relative; }
+.page-hero-media {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+}
+.page-hero .container { position: relative; z-index: 2; }
 .page-hero h1 {
   font-size: clamp(2.3rem, 5vw, 3.9rem);
   font-weight: 300;
