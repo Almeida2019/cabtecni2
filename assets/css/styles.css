@@ -780,6 +780,28 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
 .social a:hover { color: var(--invert-text); border-color: var(--invert-bg); background: var(--invert-bg); }
 .social svg { width: 17px; height: 17px; }
 
+/* --- Partner badge (NAS GLOBAL) --- */
+.partner {
+  margin-top: 34px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border);
+  max-width: 320px;
+}
+.partner-label {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  margin-bottom: 16px;
+}
+.partner-logo { width: 168px; height: auto; display: block; }
+/* Colour artwork on light backgrounds, white artwork on dark. */
+.partner-logo-white { display: none; }
+html[data-theme="dark"] .partner-logo-white { display: block; }
+html[data-theme="dark"] .partner-logo-color { display: none; }
+
 /* ============================================================
    REVEAL ANIMATION
    ============================================================ */

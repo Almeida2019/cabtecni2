@@ -126,6 +126,7 @@ const I18N = {
 
     /* ---- FOOTER ---- */
     "foot.about": "A CABTECNI, Lda presta serviços de procurement, logística e trabalhos industriais para os sectores de petróleo & gás, mineração, energia e construção — com foco na qualidade, segurança e eficiência.",
+    "foot.partner": "Parceiro oficial da NAS GLOBAL",
     "foot.company": "Empresa",
     "foot.servicesh": "Serviços",
     "foot.contacth": "Contactos",
@@ -329,6 +330,7 @@ const I18N = {
 
     /* ---- FOOTER ---- */
     "foot.about": "CABTECNI, Lda provides procurement, logistics and industrial services for the oil & gas, mining, power and construction sectors — with a focus on quality, safety and efficiency.",
+    "foot.partner": "Official partner of NAS GLOBAL",
     "foot.company": "Company",
     "foot.servicesh": "Services",
     "foot.contacth": "Contact",
