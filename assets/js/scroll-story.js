@@ -93,6 +93,11 @@
       var rect = canvas.getBoundingClientRect();
       canvas.width = Math.max(1, Math.round(rect.width * dpr));
       canvas.height = Math.max(1, Math.round(rect.height * dpr));
+      // Resizing a canvas resets its context state, so smoothing must be
+      // re-applied here. Frames are scaled to cover the viewport and the
+      // default "low" quality makes that visibly soft; "high" costs nothing.
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = "high";
     }
 
     function drawFrame(i) {
