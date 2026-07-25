@@ -615,7 +615,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
   text-align: center;
   background:
     linear-gradient(rgba(20, 20, 20, 0.80), rgba(20, 20, 20, 0.90)),
-    url("../img/welcome.jpg") center / cover no-repeat;
+    url("../img/cta-banner.jpg") center / cover no-repeat;
   border: 1px solid rgba(255,255,255,0.10);
   box-shadow: 0 30px 80px rgba(0,0,0,0.4);
   overflow: hidden;
