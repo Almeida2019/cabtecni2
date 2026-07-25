@@ -133,7 +133,6 @@
 
     function onReady() {
       if (loading) loading.classList.add("is-hidden");
-      setupScrollTrigger();
     }
 
     function setupScrollTrigger() {
@@ -189,6 +188,12 @@
     });
 
     sizeCanvas();
+    /* Establish the pin (and therefore the page's full height) before the
+       frames download. Creating it in onReady() instead meant the page was
+       ~4000px shorter until the hero finished loading, which both risked a
+       layout jump and made every lazy-loaded section below think it was
+       near the viewport, defeating their deferred loading. */
+    setupScrollTrigger();
     preload();
   }
 })();

@@ -147,7 +147,6 @@
 
       function onReady() {
         if (loading) loading.classList.add("is-hidden");
-        setupScrollTrigger();
       }
 
       function setupScrollTrigger() {
@@ -192,7 +191,31 @@
       });
 
       sizeCanvas();
-      preload();
+
+      /* Pin/layout is established up front so total page height is stable.
+         If ScrollTrigger were created only after the frames arrived, each
+         section would inject its pin spacing late and shove the page down
+         mid-scroll. */
+      setupScrollTrigger();
+
+      /* Only the frame download is deferred, until the visitor is actually
+         approaching this section. Previously every section preloaded on
+         page load, so someone who never scrolled past the hero still paid
+         for all of them. rootMargin starts the fetch ~2 screens early so
+         frames are ready before the section is reached; drawFrame() already
+         no-ops on frames that haven't arrived. */
+      if ("IntersectionObserver" in window) {
+        var started = false;
+        var io = new IntersectionObserver(function (entries) {
+          if (started || !entries.some(function (e) { return e.isIntersecting; })) return;
+          started = true;
+          io.disconnect();
+          preload();
+        }, { rootMargin: "200% 0px" });
+        io.observe(section);
+      } else {
+        preload();
+      }
     }
   }
 })();
