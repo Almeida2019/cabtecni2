@@ -18,14 +18,18 @@
   }
 
   /* ---------- i18n ---------- */
+  var LANGS = ["pt", "en", "es", "fr"];
+  // Angolan Portuguese; the rest are plain locales.
+  var HTML_LANG = { pt: "pt-AO", en: "en", es: "es", fr: "fr" };
+
   function getLang() {
     var saved = localStorage.getItem(STORAGE_KEY);
-    return (saved === "pt" || saved === "en") ? saved : DEFAULT_LANG;
+    return LANGS.indexOf(saved) > -1 ? saved : DEFAULT_LANG;
   }
 
   function applyLang(lang) {
     var dict = (typeof I18N !== "undefined" && I18N[lang]) ? I18N[lang] : {};
-    document.documentElement.lang = (lang === "pt") ? "pt-AO" : "en";
+    document.documentElement.lang = HTML_LANG[lang] || "pt-AO";
 
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       var k = el.getAttribute("data-i18n");
@@ -44,8 +48,14 @@
     });
 
     localStorage.setItem(STORAGE_KEY, lang);
-    document.querySelectorAll(".lang-toggle button").forEach(function (b) {
+
+    // reflect the choice in the dropdown: mark the active option and
+    // show the current language code on the trigger button
+    document.querySelectorAll(".lang-menu button").forEach(function (b) {
       b.classList.toggle("active", b.getAttribute("data-lang") === lang);
+    });
+    document.querySelectorAll(".lang-code").forEach(function (el) {
+      el.textContent = lang.toUpperCase();
     });
   }
 
@@ -53,10 +63,32 @@
   document.addEventListener("DOMContentLoaded", function () {
     applyLang(getLang());
 
-    // language toggle
-    document.querySelectorAll(".lang-toggle button").forEach(function (b) {
-      b.addEventListener("click", function () {
-        applyLang(b.getAttribute("data-lang"));
+    // language dropdown
+    document.querySelectorAll(".lang-select").forEach(function (sel) {
+      var trigger = sel.querySelector(".lang-current");
+      function close() {
+        sel.classList.remove("open");
+        if (trigger) trigger.setAttribute("aria-expanded", "false");
+      }
+      if (trigger) {
+        trigger.addEventListener("click", function (e) {
+          e.stopPropagation();
+          var isOpen = sel.classList.toggle("open");
+          trigger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+      }
+      sel.querySelectorAll(".lang-menu button").forEach(function (b) {
+        b.addEventListener("click", function () {
+          applyLang(b.getAttribute("data-lang"));
+          close();
+        });
+      });
+      // dismiss on outside click or Escape
+      document.addEventListener("click", function (e) {
+        if (!sel.contains(e.target)) close();
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") close();
       });
     });
 

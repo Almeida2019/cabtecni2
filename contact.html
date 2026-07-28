@@ -34,9 +34,17 @@
         <li><a href="contact.html" class="active" data-i18n="nav.contact">Contactos</a></li>
       </ul>
       <div class="nav-actions">
-        <div class="lang-toggle">
-          <button data-lang="pt">PT</button>
-          <button data-lang="en">EN</button>
+        <div class="lang-select">
+          <button class="lang-current" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Idioma / Language">
+            <span class="lang-code">PT</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-menu" role="listbox">
+            <li><button type="button" role="option" data-lang="pt">Português</button></li>
+            <li><button type="button" role="option" data-lang="en">English</button></li>
+            <li><button type="button" role="option" data-lang="es">Español</button></li>
+            <li><button type="button" role="option" data-lang="fr">Français</button></li>
+          </ul>
         </div>
         <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Alternar tema claro/escuro">
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>

@@ -267,12 +267,18 @@ html[data-theme="light"] .footer .brand-logo-color { display: block; }
 
 .nav-actions { display: flex; align-items: center; gap: 22px; }
 
-.lang-toggle { display: flex; align-items: center; gap: 2px; }
-.lang-toggle button {
-  background: transparent;
-  color: var(--nav-text-muted);
-  border: none;
+/* Language switcher — a dropdown rather than one button per language,
+   so it stays compact as languages are added (PT/EN/ES/FR). */
+.lang-select { position: relative; }
+.lang-current {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 40px;
   padding: 6px 8px;
+  background: transparent;
+  border: none;
+  color: var(--nav-text-muted);
   font-family: var(--font);
   font-size: 0.72rem;
   font-weight: 700;
@@ -280,9 +286,47 @@ html[data-theme="light"] .footer .brand-logo-color { display: block; }
   cursor: pointer;
   transition: var(--transition);
 }
-.lang-toggle button + button { border-left: 1px solid var(--nav-border); }
-.lang-toggle button.active { color: var(--nav-text); background: none; }
-.lang-toggle button:hover { color: var(--nav-text); }
+.lang-current:hover, .lang-select.open .lang-current { color: var(--nav-text); }
+.lang-current svg { width: 13px; height: 13px; transition: transform var(--transition); }
+.lang-select.open .lang-current svg { transform: rotate(180deg); }
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 158px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  box-shadow: 0 18px 44px rgba(0,0,0,0.32);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+  z-index: 20;
+}
+.lang-select.open .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.lang-menu button {
+  display: block;
+  width: 100%;
+  min-height: 44px;           /* comfortable touch target */
+  padding: 11px 14px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 0.86rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.lang-menu button:hover { background: var(--surface-2); }
+.lang-menu button.active { color: var(--accent); font-weight: 700; }
 
 .theme-toggle {
   display: inline-flex; align-items: center; justify-content: center;
@@ -815,7 +859,40 @@ html[data-theme="dark"] .partner-logo-color { display: none; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .cta { padding: 70px 28px; }
   .brand-logo { height: 26px; }
-  .nav-actions { gap: 14px; }
+  .nav-actions { gap: 10px; }
+
+  /* --- Mobile touch & legibility --- */
+  /* Footer links were only 20px tall; pad them out to a comfortable
+     tap target without changing how the list looks. */
+  .footer ul { gap: 4px; }
+  .footer ul a {
+    display: block;
+    padding: 11px 0;
+    font-size: 0.95rem;
+  }
+  .footer-contact li { padding: 7px 0; font-size: 0.95rem; }
+  /* Several labels sat at 9.9-10.6px, below comfortable reading size. */
+  .footer h4 { font-size: 0.76rem; letter-spacing: 0.2em; }
+  .partner-label { font-size: 0.7rem; letter-spacing: 0.16em; }
+  .story-card-tag { font-size: 0.68rem; letter-spacing: 0.16em; }
+  .story-loading-label { font-size: 0.72rem; letter-spacing: 0.2em; }
+  .breadcrumb { font-size: 0.72rem; letter-spacing: 0.2em; }
+  .eyebrow { font-size: 0.74rem; letter-spacing: 0.22em; }
+  .stat .label { font-size: 0.74rem; letter-spacing: 0.18em; }
+  .info-item .label { font-size: 0.72rem; letter-spacing: 0.2em; }
+  .field label { font-size: 0.72rem; letter-spacing: 0.2em; }
+  /* Header controls to a proper touch size. */
+  .theme-toggle { width: 40px; height: 40px; }
+  .social a { width: 44px; height: 44px; }
+  /* Phone/email are the primary mobile conversion actions — make them
+     easy to hit rather than 23px-tall text. */
+  .info-item a {
+    display: inline-block;
+    padding: 9px 0;
+    font-size: 1rem;
+  }
+  .breadcrumb a { display: inline-block; padding: 6px 0; }
+  .brand { padding: 7px 0; }
 }
 
 /* ============================================================
