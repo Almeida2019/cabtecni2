@@ -17,7 +17,7 @@ const I18N = {
 
     /* ---- HERO (home) ---- */
     "hero.badge": "100% Angolana · +5 anos de experiência",
-    "hero.title": "<span class='accent'>Engenharia e procurement</span> para energia, mineração, construção e indústria",
+    "hero.title": "<span class='accent'>Engenharia e procurement</span> para energia, mineração, construção e muito mais",
     "hero.lead": "A CABTECNI é uma empresa angolana de sourcing global. Fornecemos, movimentamos e mantemos os equipamentos e materiais que mantêm as suas operações a funcionar, com qualidade, segurança e no prazo.",
     "hero.cta1": "Ver Serviços",
     "hero.cta2": "Fale Connosco",
@@ -221,7 +221,7 @@ const I18N = {
 
     /* ---- HERO ---- */
     "hero.badge": "100% Angolan · 5+ years of experience",
-    "hero.title": "<span class='accent'>Engineering and procurement</span> for energy, mining, construction and industry",
+    "hero.title": "<span class='accent'>Engineering and procurement</span> for energy, mining, construction and more",
     "hero.lead": "CABTECNI is an Angolan worldwide sourcing company. We supply, move and maintain the equipment and materials that keep your operations running, with quality, safety and on-time delivery.",
     "hero.cta1": "View Services",
     "hero.cta2": "Get in Touch",
@@ -424,7 +424,7 @@ const I18N = {
 
     /* ---- HERO (home) ---- */
     "hero.badge": "100% angoleña · +5 años de experiencia",
-    "hero.title": "<span class='accent'>Ingeniería y procurement</span> para energía, minería, construcción e industria",
+    "hero.title": "<span class='accent'>Ingeniería y procurement</span> para energía, minería, construcción y mucho más",
     "hero.lead": "CABTECNI es una empresa angoleña de sourcing global. Suministramos, movemos y mantenemos los equipos y materiales que mantienen sus operaciones en marcha, con calidad, seguridad y a tiempo.",
     "hero.cta1": "Ver Servicios",
     "hero.cta2": "Contáctenos",
@@ -627,7 +627,7 @@ const I18N = {
 
     /* ---- HERO (home) ---- */
     "hero.badge": "100% angolaise · +5 ans d'expérience",
-    "hero.title": "<span class='accent'>Ingénierie et procurement</span> pour l'énergie, les mines, la construction et l'industrie",
+    "hero.title": "<span class='accent'>Ingénierie et procurement</span> pour l'énergie, les mines, la construction et plus encore",
     "hero.lead": "CABTECNI est une société angolaise de sourcing mondial. Nous fournissons, acheminons et entretenons les équipements et matériaux qui font tourner vos opérations, avec qualité, sécurité et dans les délais.",
     "hero.cta1": "Voir les Services",
     "hero.cta2": "Nous Contacter",

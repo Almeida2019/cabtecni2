@@ -970,6 +970,11 @@ html[data-theme="dark"] .partner-logo-color { display: none; }
   color: #fff;
   max-width: 820px;
   margin-bottom: 26px;
+  /* Prevents a single word (or the accent phrase) being orphaned alone
+     on its own line as the headline wraps; this has happened with
+     every language at some viewport width as the copy changed length.
+     Falls back to normal wrapping on older browsers, no risk. */
+  text-wrap: balance;
 }
 .story-hero h1 .accent { color: var(--story-accent); font-weight: 600; }
 .story-hero .lead {
