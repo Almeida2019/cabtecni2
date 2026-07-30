@@ -17,7 +17,7 @@ const I18N = {
 
     /* ---- HERO (home) ---- */
     "hero.badge": "100% Angolana · +5 anos de experiência",
-    "hero.title": "Soluções de <span class='accent'>engenharia e procurement</span> para a indústria",
+    "hero.title": "<span class='accent'>Engenharia e procurement</span> para energia, mineração, construção e indústria",
     "hero.lead": "A CABTECNI é uma empresa angolana de sourcing global. Fornecemos, movimentamos e mantemos os equipamentos e materiais que mantêm as suas operações a funcionar — com qualidade, segurança e no prazo.",
     "hero.cta1": "Ver Serviços",
     "hero.cta2": "Fale Connosco",
@@ -26,9 +26,9 @@ const I18N = {
     "sector.1": "Petróleo & Gás",
     "sector.2": "Petroquímica",
     "sector.3": "Mineração",
-    "sector.4": "Energia",
+    "sector.4": "Produção de Energia",
     "sector.5": "Construção",
-    "sector.6": "Indústria",
+    "sector.6": "Indústria Comercial",
     "sector.7": "Agricultura",
 
     /* ---- SCROLL STORY (home cinematic sequence) ---- */
@@ -221,7 +221,7 @@ const I18N = {
 
     /* ---- HERO ---- */
     "hero.badge": "100% Angolan · 5+ years of experience",
-    "hero.title": "<span class='accent'>Engineering and procurement</span> solutions for the industrial sector",
+    "hero.title": "<span class='accent'>Engineering and procurement</span> for energy, mining, construction and industry",
     "hero.lead": "CABTECNI is an Angolan worldwide sourcing company. We supply, move and maintain the equipment and materials that keep your operations running — with quality, safety and on-time delivery.",
     "hero.cta1": "View Services",
     "hero.cta2": "Get in Touch",
@@ -230,9 +230,9 @@ const I18N = {
     "sector.1": "Oil & Gas",
     "sector.2": "Petrochemical",
     "sector.3": "Mining",
-    "sector.4": "Power",
+    "sector.4": "Power Generation",
     "sector.5": "Construction",
-    "sector.6": "Industry",
+    "sector.6": "Commercial Industry",
     "sector.7": "Agriculture",
 
     /* ---- SCROLL STORY (home cinematic sequence) ---- */
@@ -424,7 +424,7 @@ const I18N = {
 
     /* ---- HERO (home) ---- */
     "hero.badge": "100% angoleña · +5 años de experiencia",
-    "hero.title": "Soluciones de <span class='accent'>ingeniería y procurement</span> para la industria",
+    "hero.title": "<span class='accent'>Ingeniería y procurement</span> para energía, minería, construcción e industria",
     "hero.lead": "CABTECNI es una empresa angoleña de sourcing global. Suministramos, movemos y mantenemos los equipos y materiales que mantienen sus operaciones en marcha — con calidad, seguridad y a tiempo.",
     "hero.cta1": "Ver Servicios",
     "hero.cta2": "Contáctenos",
@@ -433,9 +433,9 @@ const I18N = {
     "sector.1": "Petróleo y Gas",
     "sector.2": "Petroquímica",
     "sector.3": "Minería",
-    "sector.4": "Energía",
+    "sector.4": "Generación de Energía",
     "sector.5": "Construcción",
-    "sector.6": "Industria",
+    "sector.6": "Industria Comercial",
     "sector.7": "Agricultura",
 
     /* ---- SCROLL STORY ---- */
@@ -627,7 +627,7 @@ const I18N = {
 
     /* ---- HERO (home) ---- */
     "hero.badge": "100% angolaise · +5 ans d'expérience",
-    "hero.title": "Solutions d'<span class='accent'>ingénierie et de procurement</span> pour l'industrie",
+    "hero.title": "<span class='accent'>Ingénierie et procurement</span> pour l'énergie, les mines, la construction et l'industrie",
     "hero.lead": "CABTECNI est une société angolaise de sourcing mondial. Nous fournissons, acheminons et entretenons les équipements et matériaux qui font tourner vos opérations — avec qualité, sécurité et dans les délais.",
     "hero.cta1": "Voir les Services",
     "hero.cta2": "Nous Contacter",
@@ -636,9 +636,9 @@ const I18N = {
     "sector.1": "Pétrole & Gaz",
     "sector.2": "Pétrochimie",
     "sector.3": "Mines",
-    "sector.4": "Énergie",
+    "sector.4": "Production d'Énergie",
     "sector.5": "Construction",
-    "sector.6": "Industrie",
+    "sector.6": "Industrie Commerciale",
     "sector.7": "Agriculture",
 
     /* ---- SCROLL STORY ---- */
