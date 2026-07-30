@@ -221,8 +221,8 @@ const I18N = {
 
     /* ---- HERO ---- */
     "hero.badge": "100% Angolan · 5+ years of experience",
-    "hero.title": "<span class='accent'>Engineering & procurement</span> solutions for industry",
-    "hero.lead": "CABTECNI is an Angolan worldwide sourcing company. We supply, move and maintain the equipment and materials that keep your operations running — with quality, safety and on time.",
+    "hero.title": "<span class='accent'>Engineering and procurement</span> solutions for the industrial sector",
+    "hero.lead": "CABTECNI is an Angolan worldwide sourcing company. We supply, move and maintain the equipment and materials that keep your operations running — with quality, safety and on-time delivery.",
     "hero.cta1": "View Services",
     "hero.cta2": "Get in Touch",
 
@@ -244,9 +244,9 @@ const I18N = {
     "story.2.title": "Industrial reach",
     "story.2.body": "Oil & gas, petrochemical, power — we understand what each sector demands.",
     "story.3.title": "Offshore operations",
-    "story.3.body": "From platforms to plant floor, we support operations where precision isn't optional.",
+    "story.3.body": "From platforms to the plant floor, we support operations where precision isn't optional.",
     "story.4.title": "Precision in the detail",
-    "story.4.body": "Every valve, every torque, every connection — carried out by specialised technicians.",
+    "story.4.body": "Every valve, every bolt, every connection — carried out by specialised technicians.",
 
     /* ---- ABOUT INTRO ---- */
     "about.eyebrow": "About Us",
@@ -267,7 +267,7 @@ const I18N = {
     "pillar3.title": "Industrial Operations",
     "pillar3.desc": "Equipment rental, labour supply and operational support on site and during shutdowns.",
     "pillar4.title": "Safety Commitment",
-    "pillar4.desc": "Strict compliance with HSE standards and best practice on every intervention.",
+    "pillar4.desc": "Strict compliance with HSE standards and best practice in every intervention.",
 
     /* ---- SERVICES GRID ---- */
     "svc.eyebrow": "Services",
@@ -289,7 +289,7 @@ const I18N = {
     "s7.title": "Valve Services",
     "s7.short": "Supply, repair, testing and reconditioning of industrial valves.",
     "s8.title": "Piping Manufacturing",
-    "s8.short": "Fabrication of spools and piping assemblies to drawing and standards.",
+    "s8.short": "Fabrication of spools and piping assemblies to drawings and standards.",
 
     /* ---- PROCESS ---- */
     "proc.eyebrow": "How we work",
@@ -306,7 +306,7 @@ const I18N = {
     "val.eyebrow": "Industrial solutions you can trust",
     "val.title": "What drives us",
     "val1.title": "Quality & Transparency",
-    "val1.desc": "We act to best practice, safeguarding the interests of clients and partners.",
+    "val1.desc": "We work in line with best practice, safeguarding the interests of clients and partners.",
     "val2.title": "Operational Safety",
     "val2.desc": "The safety of people and assets is at the heart of every intervention we carry out.",
     "val3.title": "Partnership with Trust",
@@ -370,7 +370,7 @@ const I18N = {
     "sv.s2.desc": "We move your goods from anywhere in the world to your operation in Angola — and to the most remote project sites — coordinating freight, warehousing, customs and delivery as a single, accountable process.",
     "sv.s2.bullets": "<li>International and domestic freight forwarding (air, sea and road)</li><li>Customs clearance and import/export documentation</li><li>Warehousing, consolidation and inventory handling</li><li>Project and heavy-cargo logistics to remote sites</li><li>Real-time shipment tracking and proactive delivery updates</li>",
     "sv.s3.tag": "Precision bolting for critical joints.",
-    "sv.s3.desc": "Leaking flanges and failed joints cost time, money and safety. Our certified technicians deliver controlled hydraulic torquing and tensioning to exact specification, ensuring the integrity of pressure-critical connections.",
+    "sv.s3.desc": "Leaking flanges and failed joints cost time and money — and put safety at risk. Our certified technicians deliver controlled hydraulic torquing and tensioning to exact specification, ensuring the integrity of pressure-critical connections.",
     "sv.s3.bullets": "<li>Hydraulic torquing and hydraulic tensioning</li><li>Controlled, calibrated application to engineered specification</li><li>Flange management and joint-integrity assurance</li><li>On-site service for shutdowns, turnarounds and new construction</li><li>Full documentation and torque reporting for compliance</li>",
     "sv.s4.tag": "The right equipment, only when you need it.",
     "sv.s4.desc": "Access specialised industrial and construction equipment without the capital outlay. CABTECNI rents tools and machinery — calibrated, maintained and ready to deploy — with flexible terms that scale to your project.",
@@ -378,8 +378,8 @@ const I18N = {
     "sv.s5.tag": "Skilled hands, ready to mobilise.",
     "sv.s5.desc": "We supply qualified, experienced personnel to keep your projects staffed and moving — from technicians and tradespeople to support crews — handling the administration for you.",
     "sv.s5.bullets": "<li>Skilled and semi-skilled personnel for industrial and construction projects</li><li>Technicians, tradespeople, riggers and support crews</li><li>Competency- and safety-vetted candidates</li><li>Flexible staffing for shutdowns, turnarounds and ongoing operations</li><li>Full compliance with local labour and HSE requirements</li>",
-    "sv.s6.tag": "Get your motors back in service, built to last.",
-    "sv.s6.desc": "Downtime on a critical motor is downtime on your whole operation. Our workshop diagnoses, repairs, rewinds and reconditions electric motors of all sizes, with testing to prove it before return to duty.",
+    "sv.s6.tag": "Get your motors back in service — and keep them running.",
+    "sv.s6.desc": "Downtime on a critical motor is downtime on your whole operation. Our workshop diagnoses, repairs, rewinds and reconditions electric motors of all sizes, backed by testing before they return to service.",
     "sv.s6.bullets": "<li>Diagnostics, fault-finding and condition assessment</li><li>Rewinding of AC and DC motors across a range of sizes</li><li>Bearing replacement, reconditioning and mechanical repairs</li><li>Load and insulation testing before handover</li><li>Preventive maintenance programmes to reduce unplanned failures</li>",
     "sv.s7.tag": "Reliable flow control, maintained and tested.",
     "sv.s7.desc": "Valves are the control points of your process — and their reliability is non-negotiable. CABTECNI supplies, services, repairs and tests valves to keep your systems safe, sealed and to specification.",
