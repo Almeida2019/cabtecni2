@@ -8,6 +8,15 @@
 
 const I18N = {
   pt: {
+    /* ---- CHAT ASSISTANT ---- */
+    "chat.title": "Assistente CABTECNI",
+    "chat.open": "Abrir assistente",
+    "chat.close": "Fechar",
+    "chat.send": "Enviar",
+    "chat.placeholder": "Escreva a sua pergunta...",
+    "chat.greeting": "Olá. Posso ajudar com informação sobre os serviços, sectores e contactos da CABTECNI. O que precisa de saber?",
+    "chat.error": "Desculpe, não consegui responder agora. Tente novamente ou escreva para sales@cabtecni.com.",
+    "chat.notconfigured": "O assistente ainda não está configurado. Contacte-nos em sales@cabtecni.com ou +244 935 62 51 51.",
     /* ---- NAV / BRAND ---- */
     "brand.tag": "Engenharia & Procurement",
     "nav.home": "Início",
@@ -212,6 +221,15 @@ const I18N = {
   },
 
   en: {
+    /* ---- CHAT ASSISTANT ---- */
+    "chat.title": "CABTECNI Assistant",
+    "chat.open": "Open assistant",
+    "chat.close": "Close",
+    "chat.send": "Send",
+    "chat.placeholder": "Type your question...",
+    "chat.greeting": "Hello. I can help with information about CABTECNI's services, sectors and contact details. What would you like to know?",
+    "chat.error": "Sorry, I could not answer just now. Please try again or email sales@cabtecni.com.",
+    "chat.notconfigured": "The assistant is not configured yet. Please contact us at sales@cabtecni.com or +244 935 62 51 51.",
     /* ---- NAV / BRAND ---- */
     "brand.tag": "Engineering & Procurement",
     "nav.home": "Home",
@@ -415,6 +433,15 @@ const I18N = {
     "ct.form.ph.message": "How can we help?"  },
 
   es: {
+    /* ---- CHAT ASSISTANT ---- */
+    "chat.title": "Asistente CABTECNI",
+    "chat.open": "Abrir asistente",
+    "chat.close": "Cerrar",
+    "chat.send": "Enviar",
+    "chat.placeholder": "Escriba su pregunta...",
+    "chat.greeting": "Hola. Puedo ayudarle con información sobre los servicios, sectores y contactos de CABTECNI. ¿Qué desea saber?",
+    "chat.error": "Lo sentimos, no he podido responder ahora. Inténtelo de nuevo o escriba a sales@cabtecni.com.",
+    "chat.notconfigured": "El asistente aún no está configurado. Contáctenos en sales@cabtecni.com o +244 935 62 51 51.",
     /* ---- NAV / BRAND ---- */
     "brand.tag": "Ingeniería & Procurement",
     "nav.home": "Inicio",
@@ -618,6 +645,15 @@ const I18N = {
     "ct.form.ph.message": "¿Cómo podemos ayudarle?"  },
 
   fr: {
+    /* ---- CHAT ASSISTANT ---- */
+    "chat.title": "Assistant CABTECNI",
+    "chat.open": "Ouvrir l'assistant",
+    "chat.close": "Fermer",
+    "chat.send": "Envoyer",
+    "chat.placeholder": "Posez votre question...",
+    "chat.greeting": "Bonjour. Je peux vous renseigner sur les services, les secteurs et les coordonnées de CABTECNI. Que souhaitez-vous savoir ?",
+    "chat.error": "Désolé, je n'ai pas pu répondre pour le moment. Réessayez ou écrivez à sales@cabtecni.com.",
+    "chat.notconfigured": "L'assistant n'est pas encore configuré. Contactez-nous à sales@cabtecni.com ou +244 935 62 51 51.",
     /* ---- NAV / BRAND ---- */
     "brand.tag": "Ingénierie & Procurement",
     "nav.home": "Accueil",
