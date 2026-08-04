@@ -116,8 +116,26 @@ RULES
   them to sales@cabtecni.com or +244 935 62 51 51.`;
 }
 
-function corsHeaders(origin) {
-  const allowed = ALLOWED_ORIGINS.indexOf(origin) > -1 ? origin : ALLOWED_ORIGINS[0];
+/* The site and this function are served from the same Vercel deployment,
+   so the normal case is a same-origin call. Browsers still attach an
+   Origin header to those, and the deployment's own hostname is not
+   something we can hardcode (preview deployments get generated URLs),
+   so it is derived from the request instead. Without this the function
+   would reject its own site. */
+function isAllowedOrigin(origin, req) {
+  if (!origin) return true;                       // same-origin, header omitted
+  if (ALLOWED_ORIGINS.indexOf(origin) > -1) return true;
+  const host = req.headers["x-forwarded-host"] || req.headers.host;
+  if (!host) return false;
+  try {
+    return new URL(origin).host === host;         // same deployment
+  } catch (e) {
+    return false;
+  }
+}
+
+function corsHeaders(origin, req) {
+  const allowed = isAllowedOrigin(origin, req) && origin ? origin : ALLOWED_ORIGINS[0];
   return {
     "Access-Control-Allow-Origin": allowed,
     "Access-Control-Allow-Methods": "POST, OPTIONS",
@@ -128,14 +146,14 @@ function corsHeaders(origin) {
 
 module.exports = async function handler(req, res) {
   const origin = req.headers.origin || "";
-  const headers = corsHeaders(origin);
+  const headers = corsHeaders(origin, req);
   Object.keys(headers).forEach(function (k) { res.setHeader(k, headers[k]); });
 
   if (req.method === "OPTIONS") return res.status(204).end();
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
   // Reject calls from origins we do not recognise.
-  if (origin && ALLOWED_ORIGINS.indexOf(origin) === -1) {
+  if (!isAllowedOrigin(origin, req)) {
     return res.status(403).json({ error: "Origin not allowed" });
   }
 

@@ -1,0 +1,13 @@
+# Local dev server, not needed in production
+serve.py
+
+# Project documentation, not part of the site
+HANDOFF.md
+CHAT-SETUP.md
+README.md
+cabtecni-content-inventory.md
+cabtecni-service-descriptions.md
+
+.env
+.env.local
+.DS_Store
